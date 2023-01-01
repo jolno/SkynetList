@@ -11,6 +11,8 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
   });
 });
 
-const filtered = file.replaceAll(";", "");
+const fileContents = fs.readFile(file, "utf8"); 
+
+const filtered = fileContents.replaceAll(";", "");
 
 fs.writeFile(sdrop.txt, filtered, "utf8");
