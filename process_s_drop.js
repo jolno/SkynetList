@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 const https = require("https");
 
-await const file = fs.createWriteStream("data.txt");
+const file = fs.createWriteStream("data.txt");
 
 https.get("https://www.spamhaus.org/drop/drop.txt", response => {
   var stream = response.pipe(file);
