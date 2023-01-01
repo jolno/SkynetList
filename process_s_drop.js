@@ -1,7 +1,7 @@
-const fs = require("fs");
+const fs = require("fs").promises;
 const https = require("https");
 
-const file = fs.createWriteStream("data.txt");
+await const file = fs.createWriteStream("data.txt");
 
 https.get("https://www.spamhaus.org/drop/drop.txt", response => {
   var stream = response.pipe(file);
@@ -13,4 +13,4 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
 
 //const filtered = file.replaceAll(";", "");
 
-fs.writeFile("sdrop.txt", file, "utf8");
+await fs.writeFile("sdrop.txt", file, "utf8");
