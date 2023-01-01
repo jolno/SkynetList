@@ -18,4 +18,4 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
 await fs.writeFile("sdrop.txt", file, "utf8");
   
   	}));
-})();
+
