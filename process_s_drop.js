@@ -12,11 +12,11 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
   });
 });
 
-//const filtered = file.replaceAll(";", "");
-
 (async () => {
 
-await fsp.writeFile("sdrop.txt", stream, "utf8");
+const filtered = await file.replaceAll(";", "");
+  
+await fsp.writeFile("sdrop.txt", filtered, "utf8");
   
 })();
 
