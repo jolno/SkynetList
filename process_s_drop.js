@@ -1,10 +1,10 @@
 const fs = require("fs").promises;
 
+const regex = new RegExp(';.*');
+
 (async () => {
 
 const file = await fs.readFile("data.txt","utf8");
-
-const regex = new RegExp(';.*');
 
 const filtered = file.replaceAll(regex, "");
   
