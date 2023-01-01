@@ -14,9 +14,9 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
 
 (async () => {
 
-const fileContents = await fs.readFile("data.txt","utf8");
+const fileContents = await fsp.readFile("data.txt","utf8");
   
-const filtered = await fileContents.replaceAll(";", "");
+const filtered = fileContents.replaceAll(";", "");
   
 await fsp.writeFile("sdrop.txt", filtered, "utf8");
   
