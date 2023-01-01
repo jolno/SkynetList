@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.x
+      - run: node writeFile.js 
       - run: node process_s_drop.js
       - name: Commit & Push
         uses: actions-x/commit@v6
