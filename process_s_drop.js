@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 
 const file = await fs.readFile("data.txt","utf8");
 
-const filtered = file.replaceAll(/;/./*, "");
+const filtered = file.replaceAll(/; .*, "");
   
 await fs.writeFile("sdrop.txt", filtered, "utf8");
   
