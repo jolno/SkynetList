@@ -13,4 +13,4 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
 
 const filtered = file.replaceAll(";", "");
 
-fs.writeFile(sdrop.txt, filtered, "utf8);
+fs.writeFile(sdrop.txt, filtered, "utf8");
