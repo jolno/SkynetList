@@ -11,6 +11,6 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
   });
 });
 
-const filtered = file.replaceAll((;.*), "");
+const filtered = file.replaceAll(\x3B.*, "");
 
 await fs.writeFile(sdrop.txt, filtered, "utf8);
