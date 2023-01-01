@@ -1,9 +1,16 @@
-const fs = require("fs").promises;
-import fetch from 'node-fetch';
+const fs = require("fs");
+const https = require("https");
 
-const response = await fetch('https://www.spamhaus.org/drop/drop.txt');
-const body = await response.text();
+const file = fs.createWriteStream("data.txt");
 
-const filtered = response.replaceAll(;.*, "");
+https.get("https://www.spamhaus.org/drop/drop.txt", response => {
+  var stream = response.pipe(file);
+
+  stream.on("finish", function() {
+    console.log("done");
+  });
+});
+
+const filtered = file.replaceAll(;.*, "");
 
 await fs.writeFile(sdrop.txt, filtered, "utf8);
