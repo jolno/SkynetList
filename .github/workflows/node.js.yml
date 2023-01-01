@@ -15,10 +15,5 @@ jobs:
         with:
           node-version: 18.x
       - run: node process_s_drop.js
-      - run: node process_dshield.js
       - name: Commit & Push
         uses: actions-x/commit@v6
-        with:
-          email: feenafel@gmail.com
-          name: GitHub Actions
-          branch: master
