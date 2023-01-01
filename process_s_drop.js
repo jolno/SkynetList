@@ -16,7 +16,7 @@ https.get("https://www.spamhaus.org/drop/drop.txt", response => {
 
 (async () => {
 
-await fsp.writeFile("sdrop.txt", file, "utf8");
+await fsp.writeFile("sdrop.txt", stream, "utf8");
   
 })();
 
