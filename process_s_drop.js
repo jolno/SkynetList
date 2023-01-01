@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 
 const file = await fs.readFile("data.txt","utf8");
 
-const regex = [;].*;
+const regex = (;.*);
 
 const filtered = file.replaceAll(regex, "");
   
